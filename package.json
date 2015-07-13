@@ -34,6 +34,7 @@
     "json": "^9.0.3"
   },
   "dependencies": {
+    "amen": "latest",
     "byline": "^4.2.1",
     "minimatch": "^2.0.8",
     "when": "^3.7.2"
