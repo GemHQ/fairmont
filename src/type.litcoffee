@@ -14,7 +14,7 @@ This is actually defined in `core` to avoid circular dependences. However, we re
 
 Get the type of a value. Possible values are: `number`, `string`, '`boolean`, `date`, `regexp`, `function`, `array`, `object`, `null`, `undefined`.
 
-      type = (x) -> x?.constructor
+      type = (x) -> typeof x
 
       context.test "type"
 
