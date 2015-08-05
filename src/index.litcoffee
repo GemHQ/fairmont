@@ -60,9 +60,6 @@ Execute a shell command. Returns a promise that resolves to an object with prope
             else
               resolve {stdout, stderr}
 
-      context.test "shell", ->
-        assert (yield shell "ls ./test").stdout.trim?
-
 ## times
 
 Run a function N number of times.
