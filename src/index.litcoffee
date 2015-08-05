@@ -90,11 +90,6 @@ Run a function an record how long it took. Use this in conjunction with `times` 
         fn()
         Date.now() - start
 
-      Method.define benchmark, isGenerator, (fn) ->
-        start = Date.now()
-        yield fn()
-        Date.now() - start
-
       context.test "benchmark"
 
 ## empty
