@@ -11,7 +11,7 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-    "prepublish": "coffee -o lib/ -c src/*.coffee && npm run docs",
+    "prepublish": "coffee -o lib/ -c src/",
     "docs": "coffee doc.coffee > README.md",
     "test": "coffee test/shred.coffee"
   },

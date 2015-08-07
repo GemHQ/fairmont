@@ -65,13 +65,25 @@ $.timer = (wait, action) ->
 
 # -- load the rest of the functions
 
-{basename} = require "path"
-{readdir} = require "./fs"
-{include} = require "./object"
+fs = require('./fs')
+array = require('./array')
+assert = require('./assert')
+crypto = require('./crypto')
+object = require('./object')
+string = require('./string')
+type = require('./type')
 
-for filename in readdir(__dirname)
-  _module = basename(filename, ".coffee")
-  if _module != "index"
-    include $, require("./#{_module}")
+modules = [
+  fs
+  array
+  assert
+  crypto
+  object
+  string
+  type
+]
+
+for _module in modules
+  object.include $, _module
 
 module.exports = $
